@@ -5,7 +5,19 @@ import photo from 'assets/vigor.png';
 const Background = Styled.div`
   background: #18121e;
   height: 100%;
-  overflow: hidden;
+
+  .menu-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    color: #eac67a;
+    background-color: #233237;
+    padding: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
 `;
 
 const Cover = Styled.div`
@@ -22,6 +34,7 @@ const Cover = Styled.div`
     right: 0;
     margin: auto;
     max-width: 100%;
+    max-height: 100%;
 
     @media only screen and (max-width: 700px) {
       margin-right: 10px;
@@ -32,9 +45,17 @@ const Cover = Styled.div`
     }
   }
 
+  .body-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+    color: #eac67a;
+    font-size: 25px;
+  }
+
   .content {
     margin: 10px;
-  }
 
   .text-title {
     font-family: 'Raleway', sans-serif;
@@ -48,10 +69,7 @@ const Cover = Styled.div`
   }
 
   .profile {
-    font-size: 25px;
     width: calc(50% - 110px);
-    margin-top: 30px;
-    color: #eac67a;
     z-index: 1;
     position: relative;
 
@@ -65,23 +83,80 @@ const Cover = Styled.div`
       font-size: 20px;
     }
   }
+
+  .menu-cover {
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    border-radius: 15px;
+    padding: 25px 10px;
+    width: calc(50% - 110px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #233237;
+    align-items: center;
+
+    @media only screen and (max-width: 700px) {
+      display: none;
+    }
+
+    > div {
+      margin: 10px 0;
+    }
+  }
+
+  nav {
+    z-index: 2;
+    display: none;
+
+    @media only screen and (max-width: 700px) {
+      display: block;
+    }
+  }
 `;
 
 class App extends Component {
   render() {
     return (
       <Background>
+        <div className="collapse" id="navbarToggleExternalContent">
+          <div className="menu-bar">
+            <div>PROJECTS</div>
+            <div>CONTACT</div>
+            <div>CV</div>
+          </div>
+        </div>
         <Cover>
           <img src={photo} alt="portrait of Vigor" />
           <div className="content">
+            <nav className="navbar navbar-dark">
+              <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
+              </button>
+            </nav>
             <div className="text-title">
               Vigor Akbar
             </div>
-            <div className="profile">
-              Interested in web development, especially in front-end side of the web.
+            <div className="body-wrapper">
+              <div className="profile">
+                <div>I'm interested in web development especially on Front-end web development.</div>
+                <div></div>
+              </div>
+              {/* <div className="menu-cover">
+                <div>PROJECTS</div>
+                <div>CONTACT</div>
+                <div>CV</div>
+              </div> */}
             </div>
           </div>
         </Cover>
+        <div>TESST</div><br />
+        <div>TESST</div><br />
+        <div>TESST</div><br />
+        <div>TESST</div><br />
+        <div>TESST</div><br />
+
       </Background>
     );
   }

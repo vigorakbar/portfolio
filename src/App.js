@@ -70,6 +70,10 @@ const Cover = Styled.div`
     margin-top: 30px;
     color: #eac67a;
     font-size: 35px;
+
+    @media only screen and (max-width: 400px) {
+      margin-top: 10px;
+    }
   }
 
   .content {
@@ -91,6 +95,7 @@ const Cover = Styled.div`
 
     @media only screen and (max-width: 400px) {
       font-size: 70px;
+      margin-top: 10px;
     }
   }
 

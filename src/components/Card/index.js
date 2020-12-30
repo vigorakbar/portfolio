@@ -12,7 +12,7 @@ const Card = (props) => {
     <CardWrapper className={cx(className, "card")}>
       <img className="card-img-top" src={src} alt="Project Preview"/>
       <div className="card-body">
-        <h5 class="card-title">{title}</h5>
+        <h5 className="card-title">{title}</h5>
         <p className="card-text">{desc}</p>
       </div>
     </CardWrapper>

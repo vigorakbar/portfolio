@@ -1,19 +1,11 @@
-import React, { Component } from 'react';
-import Styled from 'styled-components';
+import React, { Component } from "react";
+import Styled from "styled-components";
 
 // import Navbar from 'components/Navbar'
-import photo from 'assets/vigor.png';
-import test from 'assets/test.png';
-import Card from './components/Card';
-
-const Background = Styled.div`
-  background: #18121e;
-  height: 100%;
-}
-`;
+import test from "./assets/test.png";
+import Card from "./components/Card";
 
 const Nav = Styled.div`
-  position: absolute;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -21,7 +13,6 @@ const Nav = Styled.div`
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
   background-color: #233237;
-  color: #eac67a;
 
   .menu-bar {
     display: flex;
@@ -29,6 +20,15 @@ const Nav = Styled.div`
     justify-content: space-between;
     max-width: 2000px;
     flex-basis: 500px;
+
+    a {
+      color: #eac67a;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #f8ecd3
+    }
 
     .main {
       font-weight: 800;
@@ -38,35 +38,17 @@ const Nav = Styled.div`
 `;
 
 const Cover = Styled.div`
-  height: 100%;
+  background: #18121e;
   display: flex;
-  justify-content: center;
-  overflow: hidden;
   position: relative;
-  img {
-    position: absolute;
-    bottom: 0;
-    right: 10vw;
-    max-width: 100%;
-    max-height: 80%;
 
-    @media only screen and (max-width: 750px) {
-      right: -20vw;
-    }
-
-    @media only screen and (max-width: 550px) {
-      right: -30vw;
-    }
-
-    @media only screen and (max-width: 375px) {
-      right: -160px;
-    }
+  .inner-cover {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1214px;
   }
 
   .body-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    
     margin-top: 30px;
     color: #eac67a;
     font-size: 35px;
@@ -77,41 +59,37 @@ const Cover = Styled.div`
   }
 
   .content {
-    margin: 60px 20px 20px 20px;
+    margin: 32px;
+    margin-left: 60px;
+    font-size: 4rem;
 
-  .text-title {
-    font-family: 'Raleway', sans-serif;
-    font-size: 120px;
-    font-weight: 600;
-    color: white;
-
-    @media only screen and (max-width: 1100px) {
-      font-size: 100px;
+    @media only screen and (max-width: 768px) {
+      margin-left: 32px;
     }
 
-    @media only screen and (max-width: 900px) {
-      font-size: 80px;
+    @media only screen and (max-width: 532px) {
+      font-size: 3rem;
     }
 
-    @media only screen and (max-width: 400px) {
-      font-size: 70px;
-      margin-top: 10px;
+    @media only screen and (max-width: 416px) {
+      font-size: 2.1rem;
+      margin: 20px;
     }
   }
 
+  .text-title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    color: white;
+  }
+
   .profile {
-    width: calc(70% - 110px);
-    z-index: 1;
-    position: relative;
-
-    @media only screen and (max-width: 700px) {
-      width: calc(60% - 35px);
-      font-size: 30px;
+    font-size: 1.8rem;
+    @media only screen and (max-width: 532px) {
+      font-size: 1.5rem;
     }
-
-    @media only screen and (max-width: 500px) {
-      width: calc(50% - 20px);
-      font-size: 22px;
+    @media only screen and (max-width: 416px) {
+      font-size: 1.2rem;
     }
   }
 `;
@@ -119,15 +97,37 @@ const Cover = Styled.div`
 const Projects = Styled.div`
   margin: 20px;
 
+  .project-wrapper {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1214px;
+  }
+
   .title {
     font-family: 'Raleway', sans-serif;
-    font-weight: 600;
-    font-size: 45px;
     margin-left: 40px;
     margin-top: 50px;
 
-    @media only screen and (max-width: 500px) {
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+
+    @media only screen and (max-width: 532px) {
       font-size: 40px;
+      margin-left: 0;
+      text-align: center;
+
+      h1 {
+        font-size: 2.3rem;
+        font-weight: 600;
+      }
+    }
+
+    @media only screen and (max-width: 416px) {
+      h1 {
+        font-size: 2rem;
+      }
     }
   }
 
@@ -146,58 +146,41 @@ class App extends Component {
   render() {
     return (
       <div>
-        {/* <Navbar /> */}
         <Nav>
           <div className="menu-bar">
-            <div>PROJECTS</div>
-            <div>CONTACT</div>
-            <div>CV</div>
+            <a href="#projects">PROJECTS</a>
+            <a href="#contact">CONTACT</a>
+            <a href="#CV">CV</a>
           </div>
         </Nav>
-        <Background>
-          <Cover>
-            <img src={photo} alt="portrait of Vigor" />
+        <Cover>
+          <div className="inner-cover">
             <div className="content">
               <div className="text-title">
-                Hi, I'm <br /> Vigor Akbar
+                Hi! 👋, <br /> I'm Vigor Akbar
               </div>
               <div className="body-wrapper">
-                <div className="profile">
-                  I'm a web developer, focused on front-end side of the web.
-                </div>
+                <p className="profile">
+                  I'm a software engineer with interest in web development
+                </p>
+                <p className="profile">Let's make our web run faster!</p>
               </div>
             </div>
-          </Cover>
-          <Projects>
+          </div>
+        </Cover>
+        <Projects id="projects">
+          <div className="project-wrapper">
             <div className="title">
-              <div>
-                Projects and Works
-              </div>
+              <h1>My Projects</h1>
             </div>
             <div className="container">
-              <Card
-                src={test}
-                title="Test 1"
-                desc="teststs"
-              />
-              <Card
-                src={test}
-                title="Test 1"
-                desc="teststs"
-              />
-              <Card
-                src={test}
-                title="Test 1"
-                desc="teststs"
-              />
-              <Card
-                src={test}
-                title="Test 1"
-                desc="teststs"
-              />
+              <Card src={test} title="Test 1" desc="teststs" />
+              <Card src={test} title="Test 1" desc="teststs" />
+              <Card src={test} title="Test 1" desc="teststs" />
+              <Card src={test} title="Test 1" desc="teststs" />
             </div>
-          </Projects>
-        </Background>
+          </div>
+        </Projects>
       </div>
     );
   }

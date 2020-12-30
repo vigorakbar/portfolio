@@ -94,7 +94,7 @@ const Cover = Styled.div`
   }
 `;
 
-const Projects = Styled.div`
+const Section = Styled.div`
   margin: 20px;
 
   .project-wrapper {
@@ -131,7 +131,7 @@ const Projects = Styled.div`
     }
   }
 
-  .container {
+  .project-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -149,8 +149,8 @@ class App extends Component {
         <Nav>
           <div className="menu-bar">
             <a href="#projects">PROJECTS</a>
+            <a href="#cv">CV</a>
             <a href="#contact">CONTACT</a>
-            <a href="#CV">CV</a>
           </div>
         </Nav>
         <Cover>
@@ -168,19 +168,33 @@ class App extends Component {
             </div>
           </div>
         </Cover>
-        <Projects id="projects">
+        <Section id="projects">
           <div className="project-wrapper">
             <div className="title">
               <h1>My Projects</h1>
             </div>
-            <div className="container">
+            <div className="project-container">
               <Card src={test} title="Test 1" desc="teststs" />
               <Card src={test} title="Test 1" desc="teststs" />
               <Card src={test} title="Test 1" desc="teststs" />
               <Card src={test} title="Test 1" desc="teststs" />
             </div>
           </div>
-        </Projects>
+        </Section>
+        <Section id="cv">
+          <div className="project-wrapper">
+            <div className="title">
+              <h1>Experience</h1>
+            </div>
+          </div>
+        </Section>
+        <Section id="contact">
+          <div className="project-wrapper">
+            <div className="title">
+              <h1>Contact</h1>
+            </div>
+          </div>
+        </Section>
       </div>
     );
   }

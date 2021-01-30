@@ -13,6 +13,22 @@ body {
   min-height: 100%;
 }
 
+a.no-style, a.no-style:hover {
+  color: black;
+  text-decoration: none; /* no underline */
+}
+
+button.no-style {
+  border: none;
+  outline: none;
+  background-color: #fff;
+  padding: 0;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

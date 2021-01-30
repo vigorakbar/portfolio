@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import Styled from "styled-components";
 
-// import Navbar from 'components/Navbar'
-import test from "./assets/test.png";
+import brainDumpster from "./assets/brain-dumpster.png";
+import theSiren from "./assets/the-siren.png";
+import weddingInvitation from "./assets/wedding-invitation-web.png";
 import Card from "./components/Card";
 
 const Nav = Styled.div`
@@ -56,7 +57,7 @@ const Cover = Styled.div`
     @media only screen and (max-width: 400px) {
       margin-top: 10px;
     }
-  }
+  }&#128526;
 
   .content {
     margin: 32px;
@@ -137,6 +138,13 @@ const Section = Styled.div`
     justify-content: space-around;
   }
 
+  .experience-container {
+    margin-left: 40px;
+    @media only screen and (max-width: 532px) {
+      margin-left: 0;
+    }
+  }
+
   div {
     margin-bottom: 50px;
   }
@@ -144,6 +152,115 @@ const Section = Styled.div`
 
 class App extends Component {
   render() {
+    const projects = [
+      {
+        title: "Brain Dumpster",
+        description: (
+          <span>
+            Web app for writing. Inspired by{" "}
+            <a href="https://750words.com/" target="_blank" rel="noreferrer">
+              750words.com
+            </a>
+            . Built using ReactJs, and Material UI. Using{" "}
+            <a
+              href="https://github.com/localForage/localForage"
+              target="_blank"
+              rel="noreferrer"
+            >
+              localForage
+            </a>{" "}
+            library for storing data. This one I use personally when I have a
+            lot in my mind and just want to dump the "trash" in my brain into
+            writing :D
+          </span>
+        ),
+        homepage: "https://vigorakbar.github.io/brain-dumpster",
+        src: brainDumpster,
+      },
+      {
+        title: "The Siren",
+        description: (
+          <span>
+            Implementation of one-page blog/magazine design concept. It's just a
+            part of the page. I downloaded a sketch design and expired the free
+            version before I finished the whole design haha. Built using React.
+            Started learning to use React Hooks with this one!
+          </span>
+        ),
+        homepage: "https://vigorakbar.github.io/the-siren/",
+        src: theSiren,
+      },
+      {
+        title: "Wedding Invitation",
+        description: (
+          <span>
+            My very first personal project! Built for my brother wedding
+            ceremony. I built this using jQuery and{" "}
+            <a
+              href="https://michalsnik.github.io/aos/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              AOS
+            </a>{" "}
+            library for the scroll animation. I learned to deploy project to AWS
+            when working in this project.
+          </span>
+        ),
+        homepage: "https://vigorakbar.github.io/wedding-invitation-web/",
+        src: weddingInvitation,
+      },
+    ];
+
+    const experience = [
+      {
+        company: "DANA Indonesia",
+        companyHomepage: "https://www.dana.id/",
+        title: "Associate Software Development Engineer",
+        time: "(Nov 2019 - Present)",
+      },
+      {
+        title: (
+          <span>
+            (sorry to interrupt this experience section, but..) I graduated from college! &#128526;
+          </span>
+        ),
+        company: "ITB",
+        companyHomepage: "https://www.itb.ac.id/",
+        time: (
+          <span>
+            , Bachelor's degree, Informatics (Aug 2015 - Jul 2019)
+            <br />
+            <br />
+            uhm.. anyway.. below are the rest of my experiences &#128071;
+          </span>
+        ),
+      },
+      {
+        company: "Surya Teknologi Nasional",
+        companyHomepage: "https://suryateknologi.co.id/",
+        title: "Frontend Engineer",
+        time: "(May 2019 - Oct 2019)",
+      },
+      {
+        company: "eDaun Inspirasi Dijital",
+        companyHomepage: "https://www.edaun.com/",
+        title: "Web Developer Part Time",
+        time: "(Nov 2018 - Mar 2019)",
+      },
+      {
+        company: "Goers",
+        companyHomepage: "https://www.goersapp.com/",
+        title: "Web Developer Internship",
+        time: "(May 2018 - Sep 2018)",
+      },
+      {
+        company: "Intelix Global Crossing",
+        companyHomepage: "https://ecentrix.co.id/",
+        title: "Software Engineer Part Time",
+        time: "(Nov 2017 - Apr 2018)",
+      },
+    ];
     return (
       <div>
         <Nav>
@@ -168,23 +285,53 @@ class App extends Component {
             </div>
           </div>
         </Cover>
-        <Section id="projects">
-          <div className="project-wrapper">
-            <div className="title">
-              <h1>My Projects</h1>
-            </div>
-            <div className="project-container">
-              <Card src={test} title="Test 1" desc="teststs" />
-              <Card src={test} title="Test 1" desc="teststs" />
-              <Card src={test} title="Test 1" desc="teststs" />
-              <Card src={test} title="Test 1" desc="teststs" />
-            </div>
-          </div>
-        </Section>
         <Section id="cv">
           <div className="project-wrapper">
             <div className="title">
               <h1>Experience</h1>
+            </div>
+            <div className="experience-container">
+              {experience.map((data, i) => (
+                <div key={i}>
+                  <h5>{data.title}</h5>
+                  <h6>
+                    <a
+                      href={data.companyHomepage}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {data.company}
+                    </a>{" "}
+                    {data.time}
+                  </h6>
+                </div>
+              ))}
+              <div>
+                <br />
+                <h4>
+                  Let's connect on{" "}
+                  <a
+                    href="https://www.linkedin.com/in/vigorakbar/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    LinkedIn
+                  </a>
+                  !
+                </h4>
+              </div>
+            </div>
+          </div>
+        </Section>
+        <Section id="projects">
+          <div className="project-wrapper">
+            <div className="title">
+              <h1>Personal Projects</h1>
+            </div>
+            <div className="project-container">
+              {projects.map((props, i) => (
+                <Card key={i} {...props} />
+              ))}
             </div>
           </div>
         </Section>
@@ -193,8 +340,26 @@ class App extends Component {
             <div className="title">
               <h1>Contact</h1>
             </div>
+            <div className="experience-container">
+              <h4>You can contact me anytime!</h4>
+              <h5>
+                Email:{" "}
+                <a href="mailto:vigorakbar@gmail.com">vigorakbar@gmail.com</a>
+              </h5>
+              <h5>
+                Linkedin:{" "}
+                <a
+                  href="https://www.linkedin.com/in/vigorakbar/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  linkedin.com/in/vigorakbar/
+                </a>
+              </h5>
+            </div>
           </div>
         </Section>
+        <br />
       </div>
     );
   }

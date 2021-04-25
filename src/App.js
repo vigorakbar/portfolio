@@ -8,6 +8,10 @@ import theSiren from "./assets/the-siren.png";
 import weddingInvitation from "./assets/wedding-invitation-web.png";
 import Card from "./components/Card";
 
+const COLOR_NAV = '#f9f0e0'
+const COLOR_NAV_HOVER = '#eac67a'
+const COLOR_COVER = '#212020'
+
 const Nav = Styled.div`
   width: 100%;
   display: flex;
@@ -25,12 +29,12 @@ const Nav = Styled.div`
     flex-basis: 500px;
 
     a {
-      color: #eac67a;
+      color: ${COLOR_NAV};
       text-decoration: none;
     }
 
     a:hover {
-      color: #f8ecd3
+      color: ${COLOR_NAV_HOVER}
     }
 
     .main {
@@ -53,7 +57,7 @@ const Cover = Styled.div`
 
   .body-wrapper {
     margin-top: 30px;
-    color: #3d3b3b;
+    color: ${COLOR_COVER};
     font-size: 35px;
 
     @media only screen and (max-width: 400px) {
@@ -83,7 +87,7 @@ const Cover = Styled.div`
   .text-title {
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
-    color: #3d3b3b;
+    color: ${COLOR_COVER};
   }
 
   .profile {
@@ -97,7 +101,9 @@ const Cover = Styled.div`
   }
 `;
 
-const Section = Styled.div`
+const OuterSection = Styled.div``
+
+const InnerSection = Styled.div`
   margin: 20px;
   * * {
     color: #3d3b3b;
@@ -115,6 +121,8 @@ const Section = Styled.div`
     margin-top: 50px;
 
     h1 {
+      border-bottom: 2px solid;
+      padding-bottom: 4px;
       font-size: 2.5rem;
       font-weight: 600;
     }
@@ -154,6 +162,20 @@ const Section = Styled.div`
     margin-bottom: 50px;
   }
 `;
+
+const Separator = Styled.div`
+  height: 50px;
+  width: 100%;
+  background: #6eb5aa;
+`
+
+const Section = ({ children }) => (
+  <OuterSection>
+    <InnerSection>
+      {children}
+    </InnerSection>
+  </OuterSection>
+)
 
 class App extends Component {
   render() {
@@ -295,6 +317,7 @@ class App extends Component {
             </div>
           </div>
         </Cover>
+        <Separator />
         <Section id="cv">
           <div className="project-wrapper">
             <div className="title">
@@ -333,6 +356,7 @@ class App extends Component {
             </div>
           </div>
         </Section>
+        <Separator />
         <Section id="projects">
           <div className="project-wrapper">
             <div className="title">
@@ -345,6 +369,7 @@ class App extends Component {
             </div>
           </div>
         </Section>
+        <Separator />
         <Section id="contact">
           <div className="project-wrapper">
             <div className="title">
@@ -369,6 +394,7 @@ class App extends Component {
             </div>
           </div>
         </Section>
+        <Separator />
         <br />
       </div>
     );

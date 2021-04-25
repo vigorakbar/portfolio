@@ -169,8 +169,8 @@ const Separator = Styled.div`
   background: #6eb5aa;
 `
 
-const Section = ({ children }) => (
-  <OuterSection>
+const Section = ({ children, ...props }) => (
+  <OuterSection {...props}>
     <InnerSection>
       {children}
     </InnerSection>

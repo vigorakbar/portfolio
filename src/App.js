@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Styled from "styled-components";
 
+import merchantPortal from "./assets/merchant-portal.png"
+import gem from "./assets/gem.png";
 import brainDumpster from "./assets/brain-dumpster.png";
 import theSiren from "./assets/the-siren.png";
 import weddingInvitation from "./assets/wedding-invitation-web.png";
@@ -13,7 +15,7 @@ const Nav = Styled.div`
   padding: 20px 40px;
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
-  background-color: #233237;
+  background-color: #3d7475;
 
   .menu-bar {
     display: flex;
@@ -39,7 +41,7 @@ const Nav = Styled.div`
 `;
 
 const Cover = Styled.div`
-  background: #18121e;
+  background: #479c9d;
   display: flex;
   position: relative;
 
@@ -51,7 +53,7 @@ const Cover = Styled.div`
 
   .body-wrapper {
     margin-top: 30px;
-    color: #eac67a;
+    color: #3d3b3b;
     font-size: 35px;
 
     @media only screen and (max-width: 400px) {
@@ -81,7 +83,7 @@ const Cover = Styled.div`
   .text-title {
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
-    color: white;
+    color: #3d3b3b;
   }
 
   .profile {
@@ -97,6 +99,9 @@ const Cover = Styled.div`
 
 const Section = Styled.div`
   margin: 20px;
+  * * {
+    color: #3d3b3b;
+  }
 
   .project-wrapper {
     margin: 0 auto;
@@ -153,6 +158,29 @@ const Section = Styled.div`
 class App extends Component {
   render() {
     const projects = [
+      {
+        title: "DANA - Merchant Portal",
+        description: (
+          <span>
+            Dashboard application for DANA's merchant or merchant that want to
+            join DANA by using onboarding process.
+          </span>
+        ),
+        homepage: "https://dashboard.dana.id/",
+        src: merchantPortal,
+      },
+      {
+        title: "GOERS Event Manager",
+        description: (
+          <span>
+            Event management application that my team and I developed when I had
+            an internship at GOERS. Build using React, Redux, Boostsrap, and
+            Styled-Components.
+          </span>
+        ),
+        homepage: "https://gem.goersapp.com/",
+        src: gem,
+      },
       {
         title: "Brain Dumpster",
         description: (
@@ -220,23 +248,6 @@ class App extends Component {
         time: "(Nov 2019 - Present)",
       },
       {
-        title: (
-          <span>
-            (sorry to interrupt this experience section, but..) I graduated from college! &#128526;
-          </span>
-        ),
-        company: "ITB",
-        companyHomepage: "https://www.itb.ac.id/",
-        time: (
-          <span>
-            , Bachelor's degree, Informatics (Aug 2015 - Jul 2019)
-            <br />
-            <br />
-            uhm.. anyway.. below are the rest of my experiences &#128071;
-          </span>
-        ),
-      },
-      {
         company: "Surya Teknologi Nasional",
         companyHomepage: "https://suryateknologi.co.id/",
         title: "Frontend Engineer",
@@ -280,7 +291,6 @@ class App extends Component {
                 <p className="profile">
                   I'm a software engineer with interest in web development
                 </p>
-                <p className="profile">Let's make our web run faster!</p>
               </div>
             </div>
           </div>
@@ -326,7 +336,7 @@ class App extends Component {
         <Section id="projects">
           <div className="project-wrapper">
             <div className="title">
-              <h1>Personal Projects</h1>
+              <h1>Projects</h1>
             </div>
             <div className="project-container">
               {projects.map((props, i) => (

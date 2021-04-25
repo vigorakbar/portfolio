@@ -63,7 +63,7 @@ const Cover = Styled.div`
     @media only screen and (max-width: 400px) {
       margin-top: 10px;
     }
-  }&#128526;
+  };
 
   .content {
     margin: 32px;
@@ -107,6 +107,9 @@ const InnerSection = Styled.div`
   margin: 20px;
   * * {
     color: #3d3b3b;
+  }
+  * a {
+    color: #007bff;
   }
 
   .project-wrapper {

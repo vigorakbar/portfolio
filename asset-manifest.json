@@ -1,25 +1,18 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.85b76efc.chunk.css",
-    "main.js": "/portfolio/static/js/main.8d39ec55.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.8d39ec55.chunk.js.map",
-    "runtime-main.js": "/portfolio/static/js/runtime-main.c74924ab.js",
-    "runtime-main.js.map": "/portfolio/static/js/runtime-main.c74924ab.js.map",
-    "static/js/2.63943b7c.chunk.js": "/portfolio/static/js/2.63943b7c.chunk.js",
-    "static/js/2.63943b7c.chunk.js.map": "/portfolio/static/js/2.63943b7c.chunk.js.map",
-    "index.html": "/portfolio/index.html",
-    "static/css/main.85b76efc.chunk.css.map": "/portfolio/static/css/main.85b76efc.chunk.css.map",
-    "static/js/2.63943b7c.chunk.js.LICENSE.txt": "/portfolio/static/js/2.63943b7c.chunk.js.LICENSE.txt",
-    "static/media/brain-dumpster.4c349138.png": "/portfolio/static/media/brain-dumpster.4c349138.png",
-    "static/media/gem.4348f224.png": "/portfolio/static/media/gem.4348f224.png",
-    "static/media/merchant-portal.5dac9969.png": "/portfolio/static/media/merchant-portal.5dac9969.png",
-    "static/media/the-siren.69ee4396.png": "/portfolio/static/media/the-siren.69ee4396.png",
-    "static/media/wedding-invitation-web.d668f3e0.png": "/portfolio/static/media/wedding-invitation-web.d668f3e0.png"
+    "main.css": "/static/css/main.3906b01c.css",
+    "main.js": "/static/js/main.b372491c.js",
+    "static/media/gem.png": "/static/media/gem.4348f2244878bd87cbf5.png",
+    "static/media/brain-dumpster.png": "/static/media/brain-dumpster.4c34913863a476d1c94f.png",
+    "static/media/wedding-invitation-web.png": "/static/media/wedding-invitation-web.d668f3e0b4f8b9108109.png",
+    "static/media/the-siren.png": "/static/media/the-siren.69ee43963bf6884e8fa8.png",
+    "static/media/merchant-portal.png": "/static/media/merchant-portal.5dac99694fd917208f82.png",
+    "index.html": "/index.html",
+    "main.3906b01c.css.map": "/static/css/main.3906b01c.css.map",
+    "main.b372491c.js.map": "/static/js/main.b372491c.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.c74924ab.js",
-    "static/js/2.63943b7c.chunk.js",
-    "static/css/main.85b76efc.chunk.css",
-    "static/js/main.8d39ec55.chunk.js"
+    "static/css/main.3906b01c.css",
+    "static/js/main.b372491c.js"
   ]
 }

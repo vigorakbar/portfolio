@@ -1,9 +1,15 @@
 export const experience = [
   {
+    company: "Shopee",
+    companyHomepage: "https://www.shopee.sg/",
+    title: "Frontend Engineer",
+    time: "(Nov 2019 -  Jul 2021)",
+  },
+  {
     company: "DANA Indonesia",
     companyHomepage: "https://www.dana.id/",
     title: "Associate Software Development Engineer",
-    time: "(Nov 2019 - Present)",
+    time: "(Nov 2019 -  Jul 2021)",
   },
   {
     company: "Surya Teknologi Nasional",

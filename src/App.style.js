@@ -13,6 +13,8 @@ export const Root = Styled.div`
 export const Nav = Styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
   height: ${HEADER_HEIGHT};
   width: 100%;
   z-index: 10;
@@ -20,12 +22,43 @@ export const Nav = Styled.div`
   top:0;
   background: ${COLOR_MAIN_BG};
 
+  padding: 0  60px;
+  @media only screen and (max-width: 768px) {
+    padding: 0 32px;
+  }
+
+  .circle {
+    display: inline-block;
+    min-width: 20px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 8px;
+    background-color: #479c9d;
+  }
+
+  .header-slash {
+    margin: 0 6px;
+  }
+
+  .header-container {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+  }
+
+
+  .header-name {
+    font-size: 18px;
+  }
+
   .menu-bar {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     max-width: 2000px;
     flex-basis: 500px;
+    font-weight: 500;
 
     a {
       color: black;

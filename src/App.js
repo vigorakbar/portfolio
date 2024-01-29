@@ -28,11 +28,12 @@ const App = () => {
     <Root>
       <Nav>
         <div className="header-container">
+          <span className="circle" />
           <span className="header-name">
             {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
             <a href="#">Vigor&nbsp;Akbar</a>
           </span>
-          <span className="header-slash">/</span>
+          <span className="header-slash"> / </span>
           <span className="header-title">Frontend Engineer</span>
         </div>
         <div className="menu-bar">

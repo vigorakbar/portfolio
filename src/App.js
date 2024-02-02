@@ -2,7 +2,6 @@ import React from "react";
 import {
   Cover,
   InnerSection,
-  Nav,
   OuterSection,
   Root,
   Separator,
@@ -11,6 +10,14 @@ import {
 import Card from "./components/Card";
 import { experience } from "./constants/experience";
 import { projects } from "./constants/projects";
+import {
+  aboutMeHref,
+  contactHref,
+  projectsHref,
+  resumeHref,
+} from "./constants/href";
+import { Header } from "./components/Header/Header";
+import { useHeaderTransition } from "./hooks/useHeaderTransition";
 
 const Section = ({ children, ...props }) => (
   <OuterSection {...props}>
@@ -18,32 +25,12 @@ const Section = ({ children, ...props }) => (
   </OuterSection>
 );
 
-const aboutMeHref = "about-me";
-const resumeHref = "resume";
-const projectsHref = "projects";
-const contactHref = "contact";
-
 const App = () => {
+  const { headerRef, targetRef } = useHeaderTransition();
   return (
     <Root>
-      <Nav>
-        <div className="header-container">
-          <span className="circle" />
-          <span className="header-name">
-            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-            <a href="#">Vigor&nbsp;Akbar</a>
-          </span>
-          <span className="header-slash"> / </span>
-          <span className="header-title">Frontend Engineer</span>
-        </div>
-        <div className="menu-bar">
-          <a href={`#${aboutMeHref}`}>ABOUT ME</a>
-          <a href={`#${resumeHref}`}>RESUME</a>
-          <a href={`#${projectsHref}`}>PROJECTS</a>
-          <a href={`#${contactHref}`}>CONTACT</a>
-        </div>
-      </Nav>
-      <Cover id={aboutMeHref}>
+      <Header ref={headerRef} />
+      <Cover id={aboutMeHref} ref={targetRef}>
         <div className="inner-cover">
           <div className="content">
             <div className="text-title">

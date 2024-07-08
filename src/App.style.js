@@ -63,6 +63,7 @@ export const Nav = Styled.div`
     a {
       color: black;
       text-decoration: none;
+      padding-right: 12px;
     }
 
     a:hover {

@@ -1,0 +1,141 @@
+@use 'sass:color';
+@use '../colors' as c;
+
+.aboutSection {
+  padding: 5rem 0;
+
+  @media (max-width: 992px) {
+    margin-top: 5rem;
+  }
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: c.$text-color;
+  margin-bottom: 1rem;
+}
+
+.titleUnderline {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, c.$primary-color, c.$secondary-color);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.aboutContent {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  
+  @media (max-width: 992px) {
+    flex-direction: column;
+  }
+}
+
+.aboutImage {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.imagePlaceholder {
+  width: 300px;
+  height: 400px;
+  background-color: c.$border-color;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.2), transparent);
+  }
+}
+
+.aboutText {
+  flex: 1.2;
+}
+
+.aboutGreeting {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: c.$primary-color;
+  margin-bottom: 1.5rem;
+}
+
+.aboutDescription {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.personalInfo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+}
+
+.infoLabel {
+  font-weight: 600;
+  color: c.$text-color;
+  margin-right: 0.5rem;
+}
+
+.infoValue {
+  color: #555;
+}
+
+.resumeButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: c.$primary-color;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background-color: color.adjust(c.$secondary-color, $lightness: -10%);
+    transform: translateY(-2px);
+  }
+  
+  svg {
+    transition: transform 0.3s ease;
+  }
+  
+  &:hover svg {
+    transform: translateY(2px);
+  }
+}

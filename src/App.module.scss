@@ -1,0 +1,41 @@
+@use './components/colors' as c;
+
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  color: #333;
+  background-color: #fafafa;
+}
+
+.mainContent {
+  flex: 1;
+  padding: 0 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  
+  @media (min-width: 768px) {
+    padding: 0 2rem;
+  }
+}
+
+:global {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: c.$bg-color;
+    color: c.$text-color;
+  }
+}

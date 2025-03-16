@@ -1,0 +1,106 @@
+@use '../colors' as c;
+
+.experienceSection {
+  padding: 5rem 1rem;
+  background-color: #f5f7fa;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: c.$text-color;
+  margin-bottom: 1rem;
+}
+
+.titleUnderline {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, c.$primary-color, c.$secondary-color);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.jobTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: c.$text-color;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-bottom: 0.75rem;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: c.$primary-color;
+    border-radius: 1.5px;
+  }
+}
+
+.jobTime {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: c.$text-color;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.jobDesc {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.projectTechnologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.techBadge {
+  padding: 0.25rem 0.75rem;
+  background-color: rgba(0, 112, 243, 0.1);
+  color: c.$primary-color;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.jobsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  
+  @media (max-width: 992px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.jobsCategory {
+  background-color: c.$card-bg;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.jobsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.jobItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}

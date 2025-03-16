@@ -1,0 +1,155 @@
+// components/Contact/Contact.module.scss
+@use 'sass:color';
+@use '../colors' as c;
+
+.contactSection {
+  padding: 5rem 0;
+  background-color: c.$bg-color;
+}
+
+.contactContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.contactTitle {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: c.$text-color;
+}
+
+.contactSubtitle {
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: c.$text-color;
+  opacity: 0.8;
+}
+
+.contactWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+}
+
+.contactInfo {
+  flex: 1;
+  padding: 1.5rem;
+  background-color: c.$card-bg;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  
+  span {
+    font-size: 1rem;
+  }
+}
+
+.contactIcon {
+  width: 20px;
+  height: 20px;
+  color: c.$primary-color;
+  flex-shrink: 0;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+  padding-top: 1rem;
+  
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: c.$primary-color;
+    color: white;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-3px);
+      background-color: c.$secondary-color;
+    }
+  }
+}
+
+.socialIcon {
+  width: 18px;
+  height: 18px;
+  color: white;
+}
+
+.contactForm {
+  flex: 2;
+  padding: 2rem;
+  background-color: c.$card-bg;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formLabel {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.formInput,
+.formTextarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid c.$border-color;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  
+  &:focus {
+    outline: none;
+    border-color: c.$primary-color;
+    box-shadow: 0 0 0 2px rgba(0, 112, 243, 0.2);
+  }
+}
+
+.submitButton {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: c.$primary-color;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  
+  &:hover {
+    background-color: color.adjust(c.$secondary-color, $lightness: -10%);;
+    transform: translateY(-2px);
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+}

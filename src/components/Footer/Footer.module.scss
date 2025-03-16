@@ -1,0 +1,111 @@
+// components/Footer/Footer.module.scss
+@use '../colors' as c;
+
+.footerContainer {
+  background-color: c.$footer-bg;
+  color: c.$footer-text-color;
+  padding: 3rem 0 1.5rem;
+}
+
+.footerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footerTop {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.footerLogo {
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  
+  p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+}
+
+.footerLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footerLinkColumn {
+  min-width: 120px;
+  
+  h4 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: c.$footer-primary-color;
+  }
+  
+  ul {
+    list-style: none;
+    
+    li {
+      margin-bottom: 0.75rem;
+      
+      a {
+        color: #f3f4f6;
+        text-decoration: none;
+        font-size: 0.9rem;
+        opacity: 0.8;
+        transition: opacity 0.3s ease, color 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        
+        &:hover {
+          opacity: 1;
+          color: c.$footer-primary-color;
+        }
+      }
+    }
+  }
+}
+
+.footerIcon {
+  width: 16px;
+  height: 16px;
+  color: c.$footer-primary-color;
+}
+
+.footerBottom {
+  padding-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+  
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+.copyright, 
+.attribution {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.heart {
+  color: #f43f5e;
+  margin: 0 0.2rem;
+}

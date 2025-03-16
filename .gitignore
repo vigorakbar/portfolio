@@ -1,18 +1,24 @@
-# Don't check auto-generated stuff into git
-coverage
-build
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
 node_modules
-stats.json
+dist
+dist-ssr
+*.local
 
-# Cruft
-.DS_Store
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
 .idea
-.env
-.vscode
-ncp-debug.log
-npm-debug.log
-yarn-error.log
-access.log
-error.log
-.eslintcache
-
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

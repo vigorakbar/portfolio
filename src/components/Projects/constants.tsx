@@ -3,6 +3,7 @@ import pokemonPocket from "../../assets/pokemon-pocket.png";
 import brainDumpster from "../../assets/brain-dumpster.png";
 import theSiren from "../../assets/the-siren.png";
 import wedding from "../../assets/wedding-invitation-web.png";
+import myWedding from "../../assets/my-wedding.png";
 
 interface Project {
   id: string;
@@ -16,6 +17,22 @@ interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    id: "My Wedding Invitation",
+    title: "My Wedding Invitation",
+    description: (
+      <span>
+        My special wedding invitation project. Built from scratch by me and my
+        wife for our special day. Featuring custom envelope scroll animation,
+        form submission, scroll transition, and mobile-first UI.
+      </span>
+    ),
+    image: myWedding,
+    category: "React",
+    technologies: ["React", "Typescript", "SASS", "Vite", "Vercel"],
+    demoLink: "https://www.airavigor-wedding.com/",
+    codeLink: "https://github.com/vigorakbar/airavigor",
+  },
   {
     id: "Pokemon Pocket",
     title: "Pokemon Pocket",
@@ -79,8 +96,8 @@ export const projects: Project[] = [
     technologies: ["React", "Material UI"],
   },
   {
-    id: "Wedding Invitation",
-    title: "Wedding Invitation",
+    id: "Brother's Wedding Invitation",
+    title: "Brother's Wedding Invitation",
     description: (
       <span>
         My very first personal project! Built for my big brother wedding

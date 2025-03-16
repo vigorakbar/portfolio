@@ -51,10 +51,10 @@ const Header: React.FC = () => {
               <a href="#experience">Experience</a>
             </li>
             <li className={styles.navItem}>
-              <a href="#skills">Skills</a>
+              <a href="#projects">Projects</a>
             </li>
             <li className={styles.navItem}>
-              <a href="#projects">Projects</a>
+              <a href="#skills">Skills</a>
             </li>
             <li className={styles.navItem}>
               <a href="#contact">Contact</a>

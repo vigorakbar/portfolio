@@ -77,7 +77,7 @@ const Skills: React.FC = () => {
         <h3 className={styles.technologiesTitle}>Other Technologies I Use</h3>
         <div className={styles.techTags}>
           {otherTech.map((tech, idx) => (
-            <span id={`${idx}`} className={styles.techTag}>
+            <span key={idx} className={styles.techTag}>
               {tech}
             </span>
           ))}
